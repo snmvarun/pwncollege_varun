@@ -400,7 +400,7 @@ Now, you try it! This process' /challenge/pwn must be piped into /challenge/coll
 
 
 ### Solve
-**Flag: **
+**Flag: pwn.college{USTYpzL9R07SBi6hNdtU7Qp9V1b.QXxITO0wyNwAzNzEzW}**
 
 ```bash
 hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn | tee temp | /challenge/college
@@ -441,10 +441,11 @@ hacker@dojo:~$ echo <(echo hi)
 hacker@dojo:~$
 ```
 Where did /dev/fd/63 come from? bash replaced <(echo hi) with the path of the named pipe file that's hooked up to the command's output! While the command is running, reading from this file will read data from the standard output of the command. Typically, this is done using commands that take input files as arguments:
-
+```bash
 hacker@dojo:~$ cat <(echo hi)
 hi
 hacker@dojo:~$
+```
 Of course, you can specify this multiple times:
 ```bash
 hacker@dojo:~$ echo <(echo pwn) <(echo college)
@@ -645,4 +646,5 @@ pwn.college{USGbZJ6IPPqHwnlMe5pG7UnkS_S.01MzMDOxwyNwAzNzEzW}
 I made a named pipe, flag_fifo in the tmp directory, then i redirected the stdout of /challenge/run into flag_fifo and printed the file contents to find the flag
 
 ### New Learnings
+
 How to create named pipes.
