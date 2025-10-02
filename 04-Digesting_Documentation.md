@@ -49,10 +49,11 @@ Many arguements may also contain take arguements.
 
 ## Reading Manuals
 This level introduces the man command. man is short for manual, and will display (if available) the manual of the command you pass as an argument. For example, let's say we wanted to learn about the yes command (yes, this is a real command):
-
+```bash
 hacker@dojo:~$ man yes
+```
 This will display the manual page for yes, which will look something like this:
-
+```bash
 YES(1)                           User Commands                          YES(1)
 
 NAME
@@ -88,8 +89,9 @@ SEE ALSO
        or available locally via: info '(coreutils) yes invocation'
 
 GNU coreutils 8.32               February 2022                          YES(1)
+```
 The important sections are:
-
+```bash
 NAME(1)                           CATEGORY                          NAME(1)
 
 NAME
@@ -112,6 +114,7 @@ SEE ALSO
 	Other man pages or online resources that might be useful.
 
 COLLECTION                        DATE                          NAME(1)
+```
 You can scroll around the manpage with your arrow keys and PgUp/PgDn. When you're done reading the manpage, you can hit q to quit.
 
 Manpages are stored in a centralized database. If you're curious, this database lives in the /usr/share/man directory, but you never need to interact with it directly: you just query it using the man command. The arguments to the man command aren't file paths, but just the names of the entries themselves (e.g., you run man yes to look up the yes manpage, rather than man /usr/bin/yes, which would be the actual path to the yes program but would result in man displaying garbage).
@@ -233,7 +236,21 @@ used the --help arguement on /challenge/challenge, it displays two special argue
 How to use the --help arguement
 
 ## Help for builtins 
-
+Some commands, rather than being programs with man pages and help options, are built into the shell itself. These are called builtins. Builtins are invoked just like commands, but the shell handles them internally instead of launching other programs. You can get a list of shell builtins by running the builtin help, as so:
+```bash
+hacker@dojo:~$ help
+```
+You can get help on a specific one by passing it to the help builtin. Let's look at a builtin that we've already used earlier, cd!
+```bash
+hacker@dojo:~$ help cd
+cd: cd [-L|[-P [-e]] [-@]] [dir]
+    Change the shell working directory.
+    
+    Change the current directory to DIR.  The default DIR is the value of the
+    HOME shell variable.
+...
+```
+Some good information! In this challenge, we'll practice using help to look up help for builtins. This challenge's challenge command is a shell builtin, rather than a program. Like before, you need to lookup its help to figure out the secret value to pass to it!
 ### Solve
 **Flag: pwn.college{ctMWSJ4Tq1I-uNVbL7Kv2y1WM-n.QX0ETO0wyNwAzNzEzW}**
 
@@ -261,3 +278,4 @@ Used the help builtin to display the help page of the challenge command to find 
 
 ### New Learnings
 What are builtins, How to use builtins and the 'help' builtin.
+
