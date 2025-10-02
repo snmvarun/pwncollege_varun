@@ -42,11 +42,11 @@ To execute a file in its directory.
 
 ## Position Thy Self 
 The Linux filesystem has tons of directories with tons of files. You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
-
+```bash
 hacker@dojo:~$ cd /some/new/directory
 hacker@dojo:/some/new/directory$
 This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out. The reasons for this will become clear later in the module.
-
+```
 As an aside, now you can see what the ~ was in the prompt! It shows the current path that your shell is located at.
 
 This challenge will require you to execute the /challenge/run program from a specific path (which it will tell you). You'll need to cd to that directory before rerunning the challenge program. Good luck!
@@ -70,9 +70,10 @@ How to change directories and execute from a specific path
 
 ## Position Elsewhere
 The Linux filesystem has tons of directories with tons of files. You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
-
+```bash
 hacker@dojo:~$ cd /some/new/directory
 hacker@dojo:/some/new/directory$
+```
 This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out. The reasons for this will become clear later in the module.
 
 As an aside, now you can see what the ~ was in the prompt! It shows the current path that your shell is located at.
@@ -101,9 +102,10 @@ How to change directories and execute from a specific path.
 
 ## Position yet elsewhere
 The Linux filesystem has tons of directories with tons of files. You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
-
+```bash
 hacker@dojo:~$ cd /some/new/directory
 hacker@dojo:/some/new/directory$
+```
 This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out. The reasons for this will become clear later in the module.
 
 As an aside, now you can see what the ~ was in the prompt! It shows the current path that your shell is located at.
@@ -165,6 +167,24 @@ Ran "challenge/run" using the relative path having cwd of /
 How to execute a file stored in a directory using a relative path to that directory.
 
 ## explicit relative path, from /
+Previously, your relative path was "naked": it directly specified the directory to descend into from the current directory. In this level, we're going to explore more explicit relative paths.
+
+In most operating systems, including Linux, every directory has two implicit entries that you can reference in paths: . and ... The first, ., refers right to the same directory, so the following absolute paths are all identical to each other:
+
+/challenge
+/challenge/.
+/challenge/./././././././././
+/./././challenge/././
+The following relative paths are also all identical to each other:
+
+challenge
+./challenge
+./././challenge
+challenge/.
+Of course, if your current working directory is /, the above relative paths are equivalent to the above absolute paths.
+
+This challenge will get you using . in your relative paths. Get ready!
+
 ### Solve
 **Flag: pwn.college{Qn3kvVpVTEtmSjUz09EOplkz9bR.QXwUTN0wyNwAzNzEzW}**
 
@@ -175,7 +195,7 @@ Correct!!!
 ./challenge/run is a relative path, invoked from the right directory!
 Here is your flag:
 pwn.college{Qn3kvVpVTEtmSjUz09EOplkz9bR.QXwUTN0wyNwAzNzEzW}
-``` 
+```
 
 ### New Learnings 
 How to execute a file stored in a directory using a explicit relative path to that directory.
@@ -184,9 +204,10 @@ How to execute a file stored in a directory using a explicit relative path to th
 In this level, we'll practice referring to paths using . a bit more. This challenge will need you to run it from the /challenge directory. Here, things get slightly tricky.
 
 Linux explicitly avoids automatically looking in the current directory when you provide a "naked" path. Consider the following:
-
+```bash
 hacker@dojo:~$ cd /challenge
 hacker@dojo:/challenge$ run
+```
 This will not invoke /challenge/run. This is actually a safety measure: if Linux searched the current directory for programs every time you entered a naked path, you could accidentally execute programs in your current directory that happened to have the same names as core system utilities! As a result, the above commands will yield the following error:
 
 bash: run: command not found
@@ -215,10 +236,11 @@ How to execute a file stored in a directory using a explicit relative path to th
 Every user has a home directory, typically under /home in the filesystem. In the dojo, you are the hacker user, and your home directory is /home/hacker. The home directory is typically where users store most of their personal files. As you make your way through pwn.college, this is where you'll store most of your solutions.
 
 Typically, your shell session will start with your home directory as your current working directory. Consider the initial prompt:
-
+```bash
 hacker@dojo:~$
+```
 The ~ in this prompt is the current working directory, with ~ being shorthand for /home/hacker. Bash provides and uses this shorthand because, again, most of your time will be spent in your home directory. Thus, whenever bash sees ~ provided as the start of an argument in a way consistent with a path, it will expand it to your home directory. Consider:
-
+```bash
 hacker@dojo:~$ echo LOOK: ~
 LOOK: /home/hacker
 hacker@dojo:~$ cd /
@@ -228,22 +250,25 @@ hacker@dojo:~/asdf$ cd ~/asdf
 hacker@dojo:~/asdf$ cd ~
 hacker@dojo:~$ cd /home/hacker/asdf
 hacker@dojo:~/asdf$
+```
+
 Note that the expansion of ~ is an absolute path, and only the leading ~ is expanded. This means, for example, that ~/~ will be expanded to /home/hacker/~ rather than /home/hacker/home/hacker.
 
 Fun fact: cd will use your home directory as the default destination:
-
+```bash
 hacker@dojo:~$ cd /tmp
 hacker@dojo:/tmp$ cd
 hacker@dojo:~$
+```
 Now it's your turn to play! In this challenge, /challenge/run will write a copy of the flag to any file you specify as an argument on the commandline, with these constraints:
 
 Your argument must be an absolute path.
 The path must be inside your home directory.
 Before expansion, your argument must be three characters or less.
 Again, you must specify your path as an argument to /challenge/run as so:
-
+```bash
 hacker@dojo:~$ /challenge/run YOUR_PATH_HERE
-
+```
 ### Solve
 **Flag: pwn.college{EW-8QIm_Gk-6y20nUoYHvoGIJIU.QXzMDO0wyNwAzNzEzW}**
 
