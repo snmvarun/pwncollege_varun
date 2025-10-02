@@ -2,12 +2,13 @@
 
 ## cat: not the pet, but the command 
 One of the most critical Linux commands is cat. cat is most often used for reading out files, like so:
-
+```bash
 hacker@dojo:~$ cat /challenge/DESCRIPTION.md
 One of the most critical Linux commands is `cat`.
 `cat` is most often used for reading out files, like so:
+```
 cat will concatenate (hence the name) multiple files if provided multiple arguments. For example:
-
+```bash
 hacker@dojo:~$ cat myfile
 This is my file!
 hacker@dojo:~$ cat yourfile
@@ -20,7 +21,7 @@ This is my file!
 This is your file!
 This is my file!
 Finally, if you give no arguments at all, cat will read from the terminal input and output it. We'll explore that in later challenges...
-
+```
 In this challenge, I will copy the flag to the flag file in your home directory (where your shell starts). Go read it with cat!
 
 ### Solve 
@@ -36,11 +37,13 @@ Learnt how to use the cat command
 
 ## Catting absolute paths
 In the last level, you did cat flag to read the flag out of your home directory! You can, of course, specify cat's arguments as absolute paths:
-
+```bash
 hacker@dojo:~$ cat /challenge/DESCRIPTION.md
+
 In the last level, you did `cat flag` to read the flag out of your home directory!
 You can, of course, specify `cat`'s arguments as absolute paths:
 ...
+```
 In this directory, I will not copy it to your home directory, but I will make it readable. You can read it with cat at its absolute path: /flag.
 
 FUN FACT: /flag is where the flag always lives in pwn.college, but unlike in this challenge, you typically can't access that file directly.
@@ -71,7 +74,17 @@ pwn.college{wIHaQv625VwWaSJbByeY98u5g3Z.QXwITO0wyNwAzNzEzW}
 how to retrieve the flag by absolute path
 
 ##  grepping for a needle in a haystack
+Sometimes, the files that you might cat out are too big. Luckily, we have the grep command to search for the contents we need! We'll learn it in this challenge.
 
+There are many ways to grep, and we'll learn one way here:
+```bash
+hacker@dojo:~$ grep SEARCH_STRING /path/to/file
+```
+Invoked like this, grep will search the file for lines of text containing SEARCH_STRING and print them to the console.
+
+In this challenge, I've put a hundred thousand lines of text into the /challenge/data.txt file. grep it for the flag!
+
+HINT: The flag always starts with the text pwn.college.
 ### Solve
 **Flag: pwn.college{w7iwllsMFdxE_ZB5KDe5OftKtwQ.QX3EDO0wyNwAzNzEzW}**
 
@@ -88,7 +101,7 @@ how to use the grep command to search in a big file
 When looking for changes between similar files, eyeballing them might not be the most efficient approach! This is where the diff command becomes invaluable.
 
 diff compares two files line by line and shows you exactly what's different between them. For example:
-
+```bash
 hacker@dojo:~$ cat file1
 hello
 world
@@ -100,10 +113,11 @@ hacker@dojo:~$ diff file1 file2
 < world
 ---
 > universe
+```
 The output tells us that line 2 changed (2c2), with world in the first file (<) being replaced by universe in the second file (>).
 
 Sometimes, when new lines are added, you'll see something like:
-
+```bash
 hacker@dojo:~$ cat old
 pwn
 hacker@dojo:~$ cat new
@@ -112,6 +126,7 @@ college
 hacker@dojo:~$ diff old new
 1a2
 > college
+```
 This tells us that after line 1 in the first file, the second file has an additional line (1a2 means "after line 1 of file1, add line 2 of file2").
 
 Now for your challenge! There are two files in /challenge:
@@ -138,7 +153,7 @@ diff command and its functions
 So far, we've told you which files to interact with. But directories can have lots of files (and other directories) inside them, and we won't always be here to tell you their names. You'll need to learn to list their contents using the ls command!
 
 ls will list files in all the directories provided to it as arguments, and in the current directory if no arguments are provided. Observe:
-
+```bash
 hacker@dojo:~$ ls /challenge
 run
 hacker@dojo:~$ ls
@@ -148,6 +163,8 @@ hacker@dojo:~$ ls /home/hacker
 Desktop    Downloads  Pictures  Templates
 Documents  Music      Public    Videos
 hacker@dojo:~$
+```
+
 In this challenge, we've named /challenge/run with some random name! List the files in /challenge to find it
 
 ### Solve
@@ -167,13 +184,14 @@ the use of ls command to list
 
 ## touching files
 Of course, you can also create files! There are several ways to do this, but we'll look at a simple command here. You can create a new, blank file by touching it with the touch command:
-
+```bash
 hacker@dojo:~$ cd /tmp
 hacker@dojo:/tmp$ ls
 hacker@dojo:/tmp$ touch pwnfile
 hacker@dojo:/tmp$ ls
 pwnfile
 hacker@dojo:/tmp$
+```
 It's that simple! In this level, please create two files: /tmp/pwn and /tmp/college, and run /challenge/run to get your flag!
 
 ### Solve
@@ -198,7 +216,7 @@ How to use the touch command to create files
 Files are all around you. Like candy wrappers, there'll eventually be too many of them. In this level, we'll learn to clean up!
 
 In Linux, you remove files with the rm command, as so:
-
+```bash
 hacker@dojo:~$ touch PWN
 hacker@dojo:~$ touch COLLEGE
 hacker@dojo:~$ ls
@@ -207,6 +225,7 @@ hacker@dojo:~$ rm PWN
 hacker@dojo:~$ ls
 COLLEGE
 hacker@dojo:~$
+```
 Let's practice. This challenge will create a delete_me file in your home directory! Delete it, then run /challenge/check, which will make sure you've deleted it and then give you the flag!
 
 ### Solve 
@@ -229,7 +248,7 @@ how to use the rm command
 
 ## moving files
 You can also move files around with the mv command. The usage is simple:
-
+```bash
 hacker@dojo:~$ ls
 my-file
 hacker@dojo:~$ cat my-file
@@ -240,6 +259,7 @@ your-file
 hacker@dojo:~$ cat your-file
 PWN!
 hacker@dojo:~$
+```
 This challenge wants you to move the /flag file into /tmp/hack-the-planet (do it)! When you're done, run /challenge/check, which will check things out and give the flag to you.
 
 ### Solve
@@ -259,7 +279,7 @@ How to use the mv command
 
 ## hidden files
 Interestingly, ls doesn't list all the files by default. Linux has a convention where files that start with a . don't show up by default in ls and in a few other contexts. To view them with ls, you need to invoke ls with the -a flag, as so:
-
+```bash
 hacker@dojo:~$ touch pwn
 hacker@dojo:~$ touch .college
 hacker@dojo:~$ ls
@@ -268,7 +288,7 @@ hacker@dojo:~$ ls -a
 .college	pwn
 hacker@dojo:~$
 Now, it's your turn! Go find the flag, hidden as a dot-prepended file in /.
-
+```
 ### Solve
 **Flag: pwn.college{g0A_ehhKrObkGE6d585IZKD1MBP.QXwUDO0wyNwAzNzEzW}** 
 
@@ -292,11 +312,12 @@ How to check hidden files by involing ls using the -a flag.
 With your knowledge of cd, ls, and cat, we're ready to play a little game!
 
 We'll start it out in /. Normally:
-
+```bash
 hacker@dojo:~$ cd /
 hacker@dojo:/$ ls
 bin   challenge  etc   home  lib32  libx32  mnt  proc  run   srv  tmp  var
 boot  dev        flag  lib   lib64  media   opt  root  sbin  sys  usr
+```
 That's a lot of contents! One day, you will be quite familiar with them, but already, you might recognize the flag file and the challenge directory.
 
 In this challenge, I have hidden the flag! Here, you will use ls and cat to follow my breadcrumbs and find it! Here's how it'll work:
@@ -391,7 +412,7 @@ Moving through multiple directories and files and displaying/printing file conte
 We can create files. How about directories? You make directories using the mkdir command. Then you can stick files in there!
 
 Watch:
-
+```bash
 hacker@dojo:~$ cd /tmp
 hacker@dojo:/tmp$ ls
 hacker@dojo:/tmp$ ls
@@ -405,7 +426,7 @@ my_file
 hacker@dojo:/tmp/my_directory$ ls /tmp/my_directory/my_file
 /tmp/my_directory/my_file
 hacker@dojo:/tmp/my_directory$
-
+```
 Now, go forth and create a /tmp/pwn directory and make a college file in it! Then run /challenge/run, which will check your solution and give you the flag!
 
 ### Solve
@@ -429,7 +450,7 @@ How to make a directory.
 So now we know how to list, read, and create files. But how do we find them? We use the find command!
 
 The find command takes optional arguments describing the search criteria and the search location. If you don't specify a search criteria, find matches every file. If you don't specify a search location, find uses the current working directory (.). For example:
-
+```bash
 hacker@dojo:~$ mkdir my_directory
 hacker@dojo:~$ mkdir my_directory/my_subdirectory
 hacker@dojo:~$ touch my_directory/my_file
@@ -441,24 +462,28 @@ hacker@dojo:~$ find
 ./my_directory/my_subdirectory/my_subfile
 ./my_directory/my_file
 hacker@dojo:~$
+```
 And when specifying the search location:
-
+```bash
 hacker@dojo:~$ find my_directory/my_subdirectory
 my_directory/my_subdirectory
 my_directory/my_subdirectory/my_subfile
 hacker@dojo:~$
+```
 And, of course, we can specify the criteria! For example, here, we filter by name:
-
+```bash
 hacker@dojo:~$ find -name my_subfile
 ./my_directory/my_subdirectory/my_subfile
 hacker@dojo:~$ find -name my_subdirectory
 ./my_directory/my_subdirectory
 hacker@dojo:~$
+```
 You can search the whole filesystem if you want!
-
+```bash
 hacker@dojo:~$ find / -name hacker
 /home/hacker
 hacker@dojo:~$
+```
 Now it's your turn. I've hidden the flag in a random directory on the filesystem. It's still called flag. Go find it!
 
 Several notes. First, there are other files named flag on the filesystem. Don't panic if the first one you try doesn't have the actual flag in it. Second, there're plenty of places in the filesystem that are not accessible to a normal user. These will cause find to generate errors, but you can ignore those; we won't hide the flag there! Finally, find can take a while; be patient!
@@ -536,22 +561,24 @@ In a filesystem, a file is, conceptually, an address at which the contents of th
 Hard links sound simpler to most people (case in point, I explained it in one sentence above, versus two for soft links), but they have various downsides and implementation gotchas that make soft/symbolic links, by far, the more popular alternative.
 
 In this challenge, we will learn about symbolic links (also known as symlinks). Symbolic links are created with the ln command with the -s argument, like so:
-
+```bash
 hacker@dojo:~$ cat /tmp/myfile
 This is my file!
 hacker@dojo:~$ ln -s /tmp/myfile /home/hacker/ourfile
 hacker@dojo:~$ cat ~/ourfile
 This is my file!
 hacker@dojo:~$
+```
 You can see that accessing the symlink results in getting the original file contents! Also, you can see the usage of ln -s. Note that the original file path comes before the link path in the command!
 
 A symlink can be identified as such with a few methods. For example, the file command, which takes a filename and tells you what type of file it is, will recognize symlinks:
-
+```bash
 hacker@dojo:~$ file /tmp/myfile
 /tmp/myfile: ASCII text
 hacker@dojo:~$ file ~/ourfile
 /home/hacker/ourfile: symbolic link to /tmp/myfile
 hacker@dojo:~$
+```
 Okay, now you try it! In this level the flag is, as always, in /flag, but /challenge/catflag will instead read out /home/hacker/not-the-flag. Use the symlink, and fool it into giving you the flag!
 
 ### Solve 
