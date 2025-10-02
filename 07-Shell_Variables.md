@@ -228,7 +228,7 @@ I first used the read -p command to display an INPUT: message and input somethin
 ### New Learnings
 How to use the read -p command to take input from the user
  
-## 
+## Reading Files
 Often, when shell users want to read a file into an environment variable, they do something like:
 ```bash
 hacker@dojo:~$ echo "test" > some_file
@@ -259,4 +259,5 @@ I read the /challenge/read_me content and redirected it into PWN variable and us
 
 ### New Learnings
 How to use input redirection to store values needed in a variable 
+
 
