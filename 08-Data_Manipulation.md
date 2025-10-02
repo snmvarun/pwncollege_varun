@@ -289,7 +289,32 @@ I first ran /challenge/run to check out its contents to find the flag in column 
 ### New Learnings
 How to extract columns of content from a dataset using the cut command
 
-##
+## Sorting Data
+Files (or output lines of commands) aren't always in the order you need them! The sort command helps you organize data. It reads lines from input (or files) and outputs them in sorted order:
+```bash
+hacker@dojo:~$ cat names.txt
+  hack
+  the
+  planet
+  with
+  pwn
+  college
+hacker@dojo:~$ sort names.txt
+  college
+  hack
+  planet
+  pwn
+  the
+  with
+hacker@dojo:~$
+```
+By default, sort orders lines alphabetically. Arguments can change this:
+
+-r: reverse order (Z to A)
+-n: numeric sort (for numbers)
+-u: unique lines only (remove duplicates)
+-R: random order!
+In this challenge, there's a file at /challenge/flags.txt containing 100 fake flags, with the real flag mixed among them. When sorted alphabetically, the real flag will be at the end (we made sure of this when generating fake flags). Go get it!
 
 ### Solve 
 **Flag: pwn.college{ogEoS_x8DRxXX8iczPuf1Pi1u7q.0FM0MDOxwyNwAzNzEzW}**
@@ -401,4 +426,5 @@ ovm.bolkefd{ofEoR_x8CRxWX8iczPtf1Ph1u7q.0FM0MCNwwyMwAzMzEyW}
 I sorted the list of flags but with an argument -r so that the reverse order would appear and the top flag would be the right flag
 
 ### New Learnings
+
 How to use the sort command to sort in various ways using different arguments
