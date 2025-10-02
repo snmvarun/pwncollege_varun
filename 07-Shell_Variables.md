@@ -259,3 +259,4 @@ I read the /challenge/read_me content and redirected it into PWN variable and us
 
 ### New Learnings
 How to use input redirection to store values needed in a variable 
+
