@@ -149,7 +149,7 @@ pwn.college{IQSMgvZzqAAj2k-v1NFuQlvXULr.0VNxEzNxwyNwAzNzEzW}
 ```
 
 ### New Learnings
-
+How to use the tr -d command with "\n" arguement to delete new lines
 
 ## Extracting the first lines with head
 In your Linux journey, you'll experience situations where you need to grab just the early output of very verbose programs. For this, you'll reach for head! The head command is used to display the first few lines of its input:
@@ -428,3 +428,4 @@ I sorted the list of flags but with an argument -r so that the reverse order wou
 ### New Learnings
 
 How to use the sort command to sort in various ways using different arguments
+
