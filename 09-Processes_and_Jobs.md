@@ -173,10 +173,148 @@ hacker       150     144  0 13:54 pts/0    00:00:00 /run/dojo/bin/bash --login
 hacker       159     150  0 13:57 pts/0    00:00:00 ps -ef
 hacker@processes~killing-misbehaving-processes:~$ kill 142
 hacker@processes~killing-misbehaving-processes:~$ /challenge/run
+Sending the flag to /tmp/flag_fifo!
+hacker@processes~killing-misbehaving-processes:~$ cat /tmp/flag_fifo
+pwn.college{6mHy1O85FV0Doo5G4uRVVI5CivSzV6hiWwVKpJlG4jVcua-}
+pwn.college{16qp1a75BaJKqOA123ztkPRLvKvYxyXRR0BysmNvVDS8nTK}
+pwn.college{tx.IbN3wejpv6xbiQKhHWmD-q2s7wkIJYp3unRBliJzMAPe}
+pwn.college{Sk6Uv6tQuwByyqZWHlBtpCbM7n5yiiWmymrWW7HLD9xlNM1}
+pwn.college{flOT41nRoQvlUfzCiHR-GWetz4pVC4d-m.OTiLZtLAsb-kr}
+pwn.college{JgCmh7t3Vp3sNVc176b8MV53CiTXlmT8EH3W0V-JRv6E8dg}
+pwn.college{tfN6tVdCncrG9.opxDEU77c-PifZWCRHb3sQfR0IIamREtu}
+pwn.college{e2SPF9qyHDFsHMaIx-RbV43v6cH8pL5.Shmp8UdxGYax0fM}
+pwn.college{EptlkiZ8OBa9-.T-b32aXudL20LpXUAWLnR4Gw2po8Brw01}
+pwn.college{y7tXMRnS6v1mEzmehDGEtCNOvf6BX0.bF0ouNUucNAprJsm}
+pwn.college{78pau.G16JCSnIWrU0cTo4i.t4-oPUxcuOnRpNEaMYtmkLu}
+pwn.college{anXUoKXbngP.g9FqSgMqiooya8V-tVwkWddPbI4T5aeU40U}
+pwn.college{doRv113zsDqFkNrFhauEDZaSSVo95.5eQJUf7OmBmWV6dW.}
+pwn.college{W6KPgwyKA2ypfhNsHvONxkFLvR.3kgBRQRrkSd7YVxpRGcl}
+pwn.college{bUkW.DcaiEqQqfZMVUaUV1NK6eIHruarVQfl6-G4OT05Os9}
+pwn.college{GKmL73m9mA1hWhpqAmzvmORDjctRZcYsT4eyiBxDVx7JSVV}
+pwn.college{LSVE2Dis5Obu66VRg1fAOHes596rKq5xYQMJ.CqM9CrFwgm}
+pwn.college{9bKN-d9STC.RBRzH2TUSIugNASwq08hz2kqPct6zfhSCNcF}
+pwn.college{qazRYn67HGgdK0Tu2fj6URflM3ohy4HMATf3HOTh-kW82fR}
+pwn.college{dSBVApGKOJd9b9sP1p-6g8nvtQR93.gMhamDSStPNqA5hBO}
+pwn.college{f95wZ3cuH6TtamdQsws.0zz.4-Lg52KXfGnMDLSqRaKswki}
+pwn.college{cj9bwuwJFdKUde84iXKsakyRil6RnK2XXDUqGxhrkuvqWnn}
+pwn.college{xycgMlAPttHqH7H9-7iSJvKr6VTQ78mujhislmDyb-vpxv6}
+pwn.college{oZvG144IIdwZVNUxbgJojHn94mvxsjIuKIC.eG13UHyaA0e}
+pwn.college{KT6mouBZchzkpgsiN0kEzr2UzRt5itSh37ECHnoXKvwUcxj}
+pwn.college{AngzvIYmngloj4boKtTNCz.RRGPSpSikZsuKqV3Hx-jjo0Q}
+pwn.college{tTcHrZXhZlvsajgvNj2ZIjgqt-JDLyNkhDT8jF.Vuu2ThQh}
+pwn.college{XZmEwcC.0zu6YEG0wMzlmpADbbufw9UIejvDjsfTvsVwZRA}
+pwn.college{t-5l9GTzbZALZAhb59IbT4iIwlnuyF4TB14B0zMAkVlQfag}
+pwn.college{gWcVhmEFuDmRJuzGOeUokq-QGlDwOFaE4PIYjI2pYViJkVn}
+pwn.college{WJGY1vL6xwiEsAIlcHA7inBRmqog2fKAlUVoOc.oee5g0eY}
+pwn.college{mKAEPGpiOlNXi80C-yVTrgPJrw9stMvu3BJmQ4J5SSO0GrY}
+pwn.college{kyyqicuL9jR-NN9ibM5JGF1p-bAaOUPzeoC5g4bFjzCA.bW}
+pwn.college{ZepgfTVzghzBSKTq11isDvzhtHtqGlsfozoLSzD4HuV1nCc}
+pwn.college{7mLdomYkfLycMpyulJ15nA.hicjgiRFarz2Ol1riFGnoewO}
+pwn.college{WFZMRPns-dAHGu.nq0cs40WdLdxCB5oBj6xvWgP9VdCYLZL}
+pwn.college{N-1hNzUV35CDi0ZlAyz-Fbml5wZ2DkmJKzE3Xn8qfOeYHOV}
+pwn.college{2T3D4Hf26aB758nvpLsYmfHXuUVt7kR4Uj.ZDgyZ3R2Ynja}
+pwn.college{l5vZ7eBmIazQDQJ2JMd5XidLzyZk6UTcRDzi.zTR10xpfzM}
+pwn.college{py.gHBbBO4GKZLbJYX3Y5Zjc1J9HHDk9QXG8DTa0hkQr7qf}
+pwn.college{j6m4n7puIwUq6OVyfVPpDRFr6t3U8nxB4oF9sRymeQYtrhT}
+pwn.college{pjeo16200iZ2NAZZX0KWvYTxy7in-scshqLrRM-RIJUzHbz}
+pwn.college{WVoc1PSRQV3Dw4kabV2wqBgVcGTBfhnFKFoyWVYaJpEwmsQ}
+pwn.college{czGR52lQ431.vQ0.2XFBtbphdkOFQ2sQwSAfeEj6958R6BO}
+pwn.college{YgWAB5Cbp28jIidEK8wigkwzJs7fxdpcQrpb0I4sKcAA1Cy}
+pwn.college{K9YSz3OHAnkseuSk0w6qg.TsmS-hyU2Heux4d0n2W6Xj1QE}
+pwn.college{M8MljB0Wz5mPLdmh1IR3YtAqw.uyLf.FxI5yumaMlbIM0iw}
+pwn.college{F2DsEmDFzhwZV7qltngNm2EPp7Crl3oKqwYU6nzjYELbsHr}
+pwn.college{QA.SgfK86KHmF6I6zOxHy69Ncyl1R6QOggHYS5lfnyokcJ9}
+pwn.college{X-nYRJf8E13SETDin41eVgZLCVqpmJHwA6LjqAI0DqnlMrd}
+pwn.college{G8aSTEkqOieiAwBEvdx9yaeoSmLCzyEIjrM1Licae4JIFWc}
+pwn.college{O-9dTQ7cd3irlWzQiqf9IM-F.83ePT6DKtuiI7lDKm08nwT}
+pwn.college{P9d5A.emQlMlJWAQMOscylNKYQNeowhgUYVsG9gPegO0PDB}
+pwn.college{uE.NFc9h3kH-eAY.mRURzOBwhjt3M-Bu6Z6rr9i4EhUcQsT}
+pwn.college{RpV4GHVwEOEsx5WyZuaAu.UCWMLSP8Tkqf7p-d13Y5hWgRC}
+pwn.college{HWielFpDW.17dEFxjYv3K1pw51M6F2TKpPlFzzQmNry6t3L}
+pwn.college{gxeU0smgeUDAwTai7LGSEISDBBiRA9qAgnKbFrb5-POLOvb}
+pwn.college{g2dImUTm.rEtUBC0GsrGrxZSGe5B0w5geu5-YvkK7geA8LD}
+pwn.college{kFCQ0QC3UjArgvpA23FIy25MQPGQy2G8LTI8d4p6q-9J8bG}
+pwn.college{cmqVwYtCRBotXZ7a32ZXY14ehzLR7LqdYXVbjbGFugk52qC}
+pwn.college{9U2IOfClgwRfiXTXBFwCeAbJPocm2-cGe0mMmgdY.CVoy-p}
+pwn.college{0C1tqgKKHwxPVBVv7Zc0ZI38ZpgL4dP5jBj2D2mqE95oOAD}
+pwn.college{Q0GKmEwvJwWKplwNyiR1KwBj6Mf1VLensmxkn08RDn5T.JA}
+pwn.college{Y8E7tG2ueyHvzQsQ15tzv6K4hpSMkhJTjWDO5anW3AyafGp}
+pwn.college{LHkFhXfmhlJpa66cXxAIWq1xmposVIKlpJKn9A6suyik9.S}
+pwn.college{OJGN1qj0Hf7H.BF-WoVfyLUBxwlPsOrq5YJZOuEcEXnDMjn}
+pwn.college{Byw0YzB6SJ0zPVqL-lmq9phxXVbYAPRwTLII1z2EFfku-T8}
+pwn.college{wJKej.8uvip-k70CD53KHA4lQaFVaY76W6dOju-FYubj.XI}
+pwn.college{IWvwACZINouSg51.Pi2vYddNiXwMBDUA5RdU8T4ehpO3P7k}
+pwn.college{eARDTuROBfws30IzypZIEPTjTyiLIUOO-7QyME.6EkS0YLb}
+pwn.college{wJKN6U-yIY6Opi0IBKKJV4IF3BJpJCNkAhJJcw.Ml0RkK.p}
+pwn.college{Bq9cdHc8avubxFfsm6i-eWYSWt39r4Z96haploZRpKoJd7v}
+pwn.college{e8pi9aYPkZoXpPfSLNRiVUeh6OtDPc3CJ8mfO60N344D51w}
+pwn.college{LkRUAV5cCIb2a8axwB-E.j285.jX242qoT36WoLdcAuKO0S}
+pwn.college{fPLbVKxwFDFIqV-gsCrnArFw.5dens0XwlFP8HFQfBLxnIK}
+pwn.college{Hr4MvyWzCQeRGT8WlhdnMsskS6THf78S018v4QBGRqslspY}
+pwn.college{Zssn-mklHPRs2l6C6OQ2zWVvxJWGS0jkBm0Ikcmf9gyG0yw}
+pwn.college{ks06-zeUVZ0v5-t1aIxbiAXsRA7NIOvDRpz9zDf3BnLgKA5}
+pwn.college{MvUsrN6tKwFQlXapzGQhWXp3.oy0aL3fE80S5OxbTeAi2OC}
+pwn.college{U-2uMCquTia-X0F2.NnYAq8J4EyHTKdMRPYN9rsqel2o9wf}
+pwn.college{VLUPA4ZqO5u-pdAAfM7JVSxQHa1LBYdTT.flFkNDwaPeL1t}
+pwn.college{oacXvGvOdjslEaDGs2tDBcO-MsjFKXSIMhKHIYAs.5LMwHq}
+pwn.college{eJbq3VCDdWptUpBcX1vsKqjdQvVIv.FP34fk5m3p0i7wo06}
+pwn.college{aZ5gjycBndTFcwXPuyTXAWUZKJdhJsYKvd-Tjo00CgVCS5G}
+pwn.college{cqX.hJVXhQTuQjPGYPFd-yXtshHtpphgLp7wRbi.Z6axebb}
+pwn.college{P2QoAv-ix8v8OXhhexguOqXN024Q5Y7c1NUj22NJLexbsV1}
+pwn.college{t-CzftPnGokqdjYAmRCOxwRsq1iclSSMGasoOrssfZnqElW}
+pwn.college{6J5iFdHo3e6MgHu6nOTuDK8Iby.IlLFOh9l4HK0R4eCtPlL}
+pwn.college{vxKO3B14ZnE8Y5u8xmawAmO1piNR3.2h6AZW5G4lux-IR7Z}
+pwn.college{CuTKNe2PKcUP6rnMs211PzcyPB0FvDTcmALLHMH1EK6nl.G}
+pwn.college{XryalfPp1Q-GyWHgxDR7d-IBn81otse5eVTffTY.u2r1qRD}
+pwn.college{3oxlARP9e5nynK2pa9LeukBN576pxrsIPmWOKAgEwDDHwl6}
+pwn.college{OwnRP8L-KU5uOvl7z-0wqB09D-fMiRHYWIVPZU-WqwQPL9Z}
+pwn.college{XpLGAPjdTfIV18hfAmUUTRTqsr78iXiQh-W3p44BMgzP...}
+pwn.college{XyGHJViGlaKQjyBRvud8cLIlVVeZfBKXHLpwhQ2i3qVDPxP}
+pwn.college{3UKH7IOUCUzYDTCd69ST0nyqEfmc43pQHRZTly195LdJbL7}
+pwn.college{PD5ZwnZRi-rMIGm6742w7aeh8rmlpgSgvYpg1t1hE.AH5fN}
+pwn.college{pGVOBsUzfvDYvIo7rji4SESx8WipDWYLagb.ww4a3tH8vix}
+pwn.college{Nobhtu.2jBFzMieuxK1WqPZaP54RPz16DVgzTIrWsde6uWE}
+pwn.college{hxzAE-flBe8WR6MdK47wzAuzI0R8n-uoACnvmPL39s-9TJI}
+pwn.college{RkmCNpZoSVHS1D8Vw.BS12f9v0Pex0wfGUk598NCuSO43zh}
+pwn.college{uEAZgpcCyrC3S0CBxSv-ufV0uuyAaiB-.jtHK.aVDO4bt-D}
+pwn.college{W8arV-rqRxE7Z0TwXeypbd7thP3XLxorl3H6HNm6MG6iny6}
+pwn.college{aaJQmm7p3nYiuyEQf.6sAC3Ar6--GgJtbV98RLwUeuqwugm}
+pwn.college{3TCunrR2QrnBFiI6HcJXx21JjzNC-RHrun0-j2fq0TWr38z}
+pwn.college{fHOmmAWPmGB.90eQnTAkFxj9eTedgszT2mFNlRU3q.nD0aN}
+pwn.college{dsXI1IGHsCM0KUPg2lJGXGqb1bTwoF3O3W9fmkV0zFgbY1c}
+pwn.college{bFSKbJ0li6LP-NxtBYJDCq6x8.DR0NA5cQlyAfaCG6IVAbx}
+pwn.college{mMuecwCWHaR5BW62wBR2d0eS4a7cMfNhEqaK5WE2QXocyJY}
+pwn.college{iML0UMo5DuUK0G39sesmwrca3yDwvLG-jQzsscktcjXwkOY}
+pwn.college{Ap8PH7nuSSMp.6rQr0srFokqA1Rg71dffQDgkVlNdTzjdJM}
+pwn.college{hALIA5L.sv4gUSka5iSBfOCXNw2vjIGVpfNHs9rJVfPd.Xt}
+pwn.college{kQwI21JdJ6EnRkyNICebEQ4wSE0oam7xlR-4AgimcKHFc7H}
+pwn.college{UNAY16mkb8pAsR7U5yobw8It78Sf3p9JmBlmR-iylbewfNU}
+pwn.college{uPt9Jwx-wIE4IvBZ40JVNsZl1fiSBPAvtWAnkoOX-DPQBCB}
+pwn.college{IjoR6qG8Sh.5xCEJSLA2Jw0BKsoS8tR-XpcHzqPRvRSvOo3}
+pwn.college{67Hc2g6lA6EMiYursvB-80A3dcPZklM7njSsyR7yGvshe.y}
+pwn.college{3DbYWZa4yXG8teEfk3A-7FFeQzcxhRpMVrKVHDYUwZ4JzZR}
+pwn.college{ml6DYJXGMHhe9PjRF-BhNUKESXjT5p8ATjVHRl.YFTEICup}
+pwn.college{xSWDA-n7VdL3tcYnluph1gffODfY68PhfVyjQQ.POaTwO-N}
+pwn.college{IId85p3XrmhNdrOiUAdzam5DGySDEVJMiU2rjaAUYkglyG3}
+pwn.college{XQzNZz93EPmISKYyeqTzxoZt5bVEnzF2.Y.EoK08GxZYYA.}
+pwn.college{9dhD9sCs9K37VzBGoK50cv0ljuD7OlHzeYBm9Y1HW5TggZy}
+pwn.college{WXCAsBFi-P0dUL3AePuvyPGKF4Oe5vJdGgvZk5I-Lv4GwYp}
+pwn.college{NQFk7EqUzJuTTwWLmH.ikgBpOgNeaJ0KlSN8iJYWB.-8WP1}
+pwn.college{qjoTHGERyr2P-KgM7Q188gD1uqawYs4ZMDconPc6f6Rfn3r}
+pwn.college{zbCYA0sW5DJQIgY7mhci65Qz5nZuG9x5Lql5l-RMU9m5PI3}
+pwn.college{QubdS9-VhATLz4wZ2FpfWSZCKQA0JgRVqk1hAgVclerX5Xo}
+pwn.college{rAWjTNVv.6Mugw-7Zwsa5bZ7AHk1SxYzvk9.L1DVi1vsOqX}
+pwn.college{Mv7OeNpQMPmVXDB24cQUOO7pN1ciUehiTfQnbB8jbH7ReM3}
+pwn.college{WPztDTp.3IW8uiDCC74uLfFWL.2.Vg6uOz1MBZSZf4PHFpF}
+pwn.college{R5AYxpe.fWYeBicFumGO4Rzmb0Ya5C7G8Jx2la1x6.9pj64}
+pwn.college{UYoaEDYDmtSFEH-kt7Bd7-585d1w2Bcoy2sJt38TZLX279.}
+pwn.college{hcYQrRFALHTehlqeVk28Q0.dwhZqkUmu2LlkueX9u4vN6iG}
+pwn.college{YREag2f-JhhxHGMF1oR5ADcYN93.0FNzMDOxwyNwAzNzEzW}
 ```
+I ran ps -ef command to display the list of ongoing processes to obtain the PID of /challenge/decoy, when I got the PID I used the kill command to terminate it and then ran /challenge/run to send the flag to /tmp/flag_fifo, exiting the shell and reloading it and catted the content of /tmp/flag_fifo displaying a lot of decoy flags but the last flag is the real flag as mentioned in NOTE.
 
 ### New Learnings
-
+Better understanding of how to use kill command to terminate a process.
 
 ## Suspending Processes
 You have learned to interrupt processes with Ctrl-C, but there are less drastic measures you can use to get your terminal back! You can suspend processes to the background with Ctrl-Z. In this level, we'll explore how this works and, in the next level, we'll figure out how to resume those suspended processes!
@@ -433,4 +571,5 @@ I ran ?challenge/get-code and then echoed the error code so that it can print th
 
 ### New Learnings
 How to run Process exit codes and what are they.
+
 
