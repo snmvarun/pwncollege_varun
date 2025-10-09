@@ -125,7 +125,8 @@ Now, go and win!
 
 ```bash
 hacker@path~adding-commands:~$ nano ~/win
-  GNU nano 8.4                                              /home/hacker/win                                                            #!/bin/bash
+  GNU nano 8.4                                              /home/hacker/win
+  #!/bin/bash
 
   cat /flag
 hacker@path~adding-commands:~$ chmod +x ~/win
@@ -153,7 +154,8 @@ How can you solve this? You know that rm is searched for in the directories list
 
 ```bash
 hacker@path~hijacking-commands:~$ nano ~/rm
-  GNU nano 8.4                                               /home/hacker/rm                                                            #!/bin/bash
+  GNU nano 8.4                                               /home/hacker/rm
+  #!/bin/bash
 
   cat "$2"
 hacker@path~hijacking-commands:~$ chmod +x ~/rm
@@ -167,4 +169,5 @@ The plan was to replace the rm command from deleting the flag to catting the fla
 
 ### New Learning
 How to hijack over certain commands.
+
 
