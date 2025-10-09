@@ -254,7 +254,8 @@ FUN FACT: Common shebangs you might see:
 
 ```bash
 hacker@chaining~understanding-shebangs:~$ nano solve.sh
-  GNU nano 8.4                                                  solve.sh                                                                #!/bin/bash
+  GNU nano 8.4                                                  solve.sh
+  #!/bin/bash
 
   echo "hack the planet"
 hacker@chaining~understanding-shebangs:~$ chmod +x /home/hacker/solve.sh
@@ -356,7 +357,8 @@ NOTE: Interested in what else you can check in a condition, other than string eq
 
 ```bash
 hacker@chaining~scripting-with-conditionals:~$ nano solve.sh
-    GNU nano 8.4                                                  solve.sh                                                              #!/bin/bash
+    GNU nano 8.4                                                  solve.sh
+    #!/bin/bash
 
     if [ "$1" == "pwn" ]
     then
@@ -419,7 +421,8 @@ Once your script works correctly, run /challenge/run to get your flag!
 
 ```bash
 hacker@chaining~scripting-with-default-cases:~$ nano solve.sh
-  GNU nano 8.4                                                  solve.sh                                                                 #!/bin/bash
+  GNU nano 8.4                                                  solve.sh
+  #!/bin/bash
   if [ "$1" == "pwn" ]
   then
       echo "college"
@@ -485,7 +488,8 @@ NOTE: As you're creating your script, make sure to follow the spacing closely in
 
 ```bash
 hacker@chaining~scripting-with-multiple-conditions:~$ nano solve.sh
-  GNU nano 8.4                                                  solve.sh                                                                  #!/bin/bash
+  GNU nano 8.4                                                  solve.sh
+  #!/bin/bash
   if [ "$1" == "hack" ]
   then
       echo "the planet"
@@ -540,4 +544,5 @@ I catted the contents of /challenge/run and by examining, I figured out that the
 
 ### New Learnings   
 How executables can also be shell script. 
+
 
