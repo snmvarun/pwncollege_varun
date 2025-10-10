@@ -18,7 +18,8 @@ HINT: Need to poke around as zardus to debug your solution? In practice mode, yo
 
 ```bash
 hacker@shenanigans~bashrc-backdoor:~$ nano /home/zardus/.bashrc
-  GNU nano 8.4                                            /home/zardus/.bashrc                                             Modified  # this sets up a scary red shell prompt!
+  GNU nano 8.4                                            /home/zardus/.bashrc                                             Modified
+  # this sets up a scary red shell prompt!
   PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ '
 
   # add your attack below this line!
@@ -279,5 +280,6 @@ I ran nano /home/zardus/.bashrc to go through zardus' startup script, which was 
 
 ### New Learnings
 The risk of world-readable config files.
+
 
 
